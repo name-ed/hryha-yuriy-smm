@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Грига Юрій - SMM спеціаліст | Прокачаю ваш бізнес у соцмережах</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.95), rgba(55, 65, 81, 0.95));
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ffffff, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(45deg, #60a5fa, #3b82f6);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #374151 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            animation: float 30s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateX(-100px) translateY(-100px); }
+            100% { transform: translateX(100px) translateY(100px); }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.3s both;
+            color: #60a5fa;
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.6s both;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 2.5rem;
+            background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.9s both;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, #1e3a8a, #3730a3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Why SMM Section */
+        .why-smm {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .why-item {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #1e3a8a, #3730a3);
+        }
+
+        .why-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(30, 58, 138, 0.2);
+        }
+
+        .why-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .why-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            height: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .about-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .about-text h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1e3a8a;
+        }
+
+        .about-text h4 {
+            font-size: 1.3rem;
+            color: #3730a3;
+            margin-bottom: 2rem;
+        }
+
+        /* Services Section */
+        .services {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #1e3a8a, #60a5fa);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Work Steps */
+        .work-steps {
+            background: white;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .step-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #1e3a8a, #3730a3);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .step-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+        }
+
+        /* Cases Section */
+        .cases {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+            color: white;
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .case-item {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .case-item:hover {
+            transform: scale(1.05);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .case-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #60a5fa;
+        }
+
+        .case-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .case-stat {
+            text-align: center;
+        }
+
+        .case-stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #60a5fa;
+        }
+
+        .case-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .case-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(45deg, #60a5fa, #3b82f6);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .case-link:hover {
+            background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Expert Stats */
+        .expert-stats {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .expert-stats h2 {
+            color: #60a5fa;
+            margin-bottom: 3rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-item {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, #60a5fa, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .pricing-card.featured {
+            border: 3px solid #1e3a8a;
+            transform: scale(1.05);
+        }
+
+        .pricing-card.featured::before {
+            content: 'Популярний';
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: #1e3a8a;
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+        }
+
+        .plan-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 2rem;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .plan-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+
+        .plan-button {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(45deg, #1e3a8a, #3730a3);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .plan-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
+        }
+
+        /* Consultations */
+        .consultations {
+            background: white;
+        }
+
+        .consultations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .consultation-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 2px solid #1e3a8a;
+            transition: all 0.3s ease;
+        }
+
+        .consultation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(30, 58, 138, 0.2);
+        }
+
+        .consultation-platform {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 0.5rem;
+        }
+
+        .consultation-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #3730a3;
+            margin-bottom: 1rem;
+        }
+
+        .consultation-features {
+            list-style: none;
+        }
+
+        .consultation-features li {
+            padding: 0.3rem 0;
+            color: #374151;
+        }
+
+        .consultation-features li::before {
+            content: '✓';
+            color: #1e3a8a;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #1f2937;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .faq-question:hover {
+            background: #f3f4f6;
+        }
+
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: #1e3a8a;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active::after {
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer.active {
+            max-height: 200px;
+        }
+
+        .faq-answer-content {
+            padding: 0 1.5rem 1.5rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+            color: white;
+        }
+
+        .contact .section-title {
+            color: white;
+            background: none;
+            -webkit-text-fill-color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #60a5fa;
+        }
+
+        .contact-form {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.9);
+            color: #1f2937;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            background: white;
+            box-shadow: 0 5px 25px rgba(96, 165, 250, 0.3);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+        }
+
+        .contact-details {
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #1e3a8a, #3730a3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px);
+            background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Loading Animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-top: 3px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">Грига Юрій</a>
+            <ul class="nav-links">
+                <li><a href="#home">Головна</a></li>
+                <li><a href="#about">Про мене</a></li>
+                <li><a href="#services">Послуги</a></li>
+                <li><a href="#cases">Кейси</a></li>
+                <li><a href="#pricing">Тарифи</a></li>
+                <li><a href="#contact">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Прокачаю ваш бізнес у соцмережах</h1>
+            <p class="hero-subtitle">від контенту до продажу</p>
+            <p>Допоможу збільшити впізнаваність вашого бренду, залучити нових клієнтів та підвищити продажі через соціальні мережі</p>
+            <a href="#contact" class="cta-button">Почати співпрацю</a>
+        </div>
+    </section>
+
+    <!-- Why SMM Section -->
+    <section class="why-smm">
+        <div class="container">
+            <h2 class="section-title fade-in">Навіщо потрібен SMM-спеціаліст</h2>
+            <div class="why-grid">
+                <div class="why-item fade-in">
+                    <div class="why-icon">👥</div>
+                    <h3>Інтерес аудиторії</h3>
+                    <p>Створюю контент, який дійсно цікавий вашій цільовій аудиторії та мотивує до взаємодії з брендом</p>
+                </div>
+                <div class="why-item fade-in">
+                    <div class="why-icon">🎯</div>
+                    <h3>Впізнаваність бренду</h3>
+                    <p>Розробляю унікальний стиль та голос бренду, який виділить вас серед конкурентів</p>
+                </div>
+                <div class="why-item fade-in">
+                    <div class="why-icon">❤️</div>
+                    <h3>Лояльність підписників</h3>
+                    <p>Будую довіру та емоційний зв'язок з аудиторією, що перетворює підписників на клієнтів</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image fade-in">
+                    <img id="profile-photo" src="" alt="Грига Юрій - SMM спеціаліст" />
+                </div>
+                <div class="about-text fade-in">
+                    <h3>Грига Юрій</h3>
+                    <h4>SMM спеціаліст</h4>
+                    <p>Привіт! Я Юрій, і я допомагаю бізнесу розвиватися в соціальних мережах. За час моєї роботи я допоміг десяткам компаній збільшити свою присутність онлайн та підвищити продажі.</p>
+                    <p>Моя спеціалізація включає повне ведення соціальних мереж, розробку контент-планів, налаштування таргетованої реклами та аналіз ефективності. Я працюю з різними нішами: від технологічних стартапів до промислових підприємств.</p>
+                    <p>Мій підхід базується на глибокому аналізі вашої аудиторії та створенні контенту, який не просто виглядає професійно, а й ефективний для бізнесу.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Steps -->
+    <section class="work-steps">
+        <div class="container">
+            <h2 class="section-title fade-in">Етапи роботи зі мною</h2>
+            <div class="steps-grid">
+                <div class="step-item fade-in">
+                    <div class="step-number">01</div>
+                    <h3>Знайомство та брифінг</h3>
+                    <p>Детально вивчаю ваш бізнес, цілі та аудиторію</p>
+                </div>
+                <div class="step-item fade-in">
+                    <div class="step-number">02</div>
+                    <h3>Планування та узгодження</h3>
+                    <p>Розробляю стратегію та узгоджую всі деталі</p>
+                </div>
+                <div class="step-item fade-in">
+                    <div class="step-number">03</div>
+                    <h3>Побудова стратегії</h3>
+                    <p>Створюю комплексний план просування</p>
+                </div>
+                <div class="step-item fade-in">
+                    <div class="step-number">04</div>
+                    <h3>Реалізація контент-плану</h3>
+                    <p>Втілюю стратегію в життя та отримуємо результати</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title fade-in">Які послуги я надаю</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-price">від 5000₴</div>
+                    <h3>Ведення соціальних мереж</h3>
+                    <p>Повне ведення вашої сторінки в соціальних мережах, розробка контент-плану, складання правильного тайм-фрейму коли можна викладати пости та історії, повна аналітика вашої сторінки!</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-price">від 2000₴</div>
+                    <h3>Розробка контент‒плану</h3>
+                    <p>Повна аналітика вашої сторінки для того щоб зрозуміти який саме буде корисний контент для вашого бренду!</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-price">від 3000₴</div>
+                    <h3>Таргетована реклама</h3>
+                    <p>Налаштування реклами для вашої сторінки, аналіз ринку товару який ви збираєтесь впровадити!</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-price">від 1000₴</div>
+                    <h3>Аналіз та оптимізація</h3>
+                    <p>Аналіз статистики яка є в даний час на вашій сторінці, повна оптимізація статистики звідки ми зможемо зрозуміти які є плюси, а які є мінуси на вашій сторінці!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases Section -->
+    <section id="cases" class="cases">
+        <div class="container">
+            <h2 class="section-title fade-in">Успішні кейси</h2>
+            <div class="cases-grid">
+                <div class="case-item fade-in">
+                    <h3>Savage flowers</h3>
+                    <p>Підвищення впізнаваності бренду</p>
+                    <div class="case-stats">
+                        <div class="case-stat">
+                            <div class="case-stat-number">+2500</div>
+                            <div class="case-stat-label">підписників</div>
+                        </div>
+                        <div class="case-stat">
+                            <div class="case-stat-number">+41%</div>
+                            <div class="case-stat-label">активності</div>
+                        </div>
+                        <div class="case-stat">
+                            <div class="case-stat-number">+900</div>
+                            <div class="case-stat-label">замовлень</div>
+                        </div>
+                    </div>
+                    <a href="https://t.me/CryptoWayX" target="_blank" class="case-link">Переглянути кейс</a>
+                </div>
+                <div class="case-item fade-in">
+                    <h3>Imperial cosmetics</h3>
+                    <p>Підвищення впізнаваності бренду</p>
+                    <div class="case-stats">
+                        <div class="case-stat">
+                            <div class="case-stat-number">+700</div>
+                            <div class="case-stat-label">підписників</div>
+                        </div>
+                        <div class="case-stat">
+                            <div class="case-stat-number">+32%</div>
+                            <div class="case-stat-label">активності</div>
+                        </div>
+                        <div class="case-stat">
+                            <div class="case-stat-number">+200</div>
+                            <div class="case-stat-label">замовлень</div>
+                        </div>
+                    </div>
+                    <a href="https://t.me/PromoUAPro" target="_blank" class="case-link">Переглянути кейс</a>
+                </div>
+                <div class="case-item fade-in">
+                    <h3>ENERGY DRINK CO</h3>
+                    <p>Підвищення впізнаваності бренду</p>
+                    <div class="case-stats">
+                        <div class="case-stat">
+                            <div class="case-stat-number">+800</div>
+                            <div class="case-stat-label">підписників</div>
+                        </div>
+                        <div class="case-stat">
+                            <div class="case-stat-number">+20%</div>
+                            <div class="case-stat-label">активності</div>
+                        </div>
+                        <div class="case-stat">
+                            <div class="case-stat-number">+130</div>
+                            <div class="case-stat-label">замовлень</div>
+                        </div>
+                    </div>
+                    <a href="https://t.me/ua_cryptoinvest" target="_blank" class="case-link">Переглянути кейс</a>
+                </div>
+                <div class="case-item fade-in">
+                    <h3>Travel collection</h3>
+                    <p>Підвищення впізнаваності бренду</p>
+                    <div class="case-stats">
+                        <div class="case-stat">
+                            <div class="case-stat-number">+950</div>
+                            <div class="case-stat-label">підписників</div>
+                        </div>
+                        <div class="case-stat">
+                            <div class="case-stat-number">+37%</div>
+                            <div class="case-stat-label">активності</div>
+                        </div>
+                        <div class="case-stat">
+                            <div class="case-stat-number">+550</div>
+                            <div class="case-stat-label">замовлень</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Stats -->
+    <section class="expert-stats">
+        <div class="container">
+            <h2 class="fade-in">Експерт у сфері соціального медіа‒маркетингу</h2>
+            <div class="stats-grid">
+                <div class="stat-item fade-in">
+                    <div class="stat-number">300%</div>
+                    <div class="stat-label">Зростання аудиторії</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">150%</div>
+                    <div class="stat-label">Підвищення залученості</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">40%</div>
+                    <div class="stat-label">Зростання продажів</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title fade-in">Діючі плани для місячної роботи</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <h3 class="plan-name">Старт</h3>
+                    <div class="plan-price">від 10 000 ₴</div>
+                    <ul class="plan-features">
+                        <li>Створення стратегії розвитку</li>
+                        <li>Ведення соціальних мереж</li>
+                        <li>Контент план на 10 публікацій</li>
+                    </ul>
+                    <button class="plan-button">Обрати план</button>
+                </div>
+                <div class="pricing-card featured fade-in">
+                    <h3 class="plan-name">Розкрутка</h3>
+                    <div class="plan-price">від 15 000 ₴</div>
+                    <ul class="plan-features">
+                        <li>Створення стратегії розвитку</li>
+                        <li>Ведення соціальних мереж</li>
+                        <li>Контент план на 10 публікацій</li>
+                        <li>Запуск таргетованої реклами</li>
+                    </ul>
+                    <button class="plan-button">Обрати план</button>
+                </div>
+                <div class="pricing-card fade-in">
+                    <h3 class="plan-name">Бізнес</h3>
+                    <div class="plan-price">від 25 000 ₴</div>
+                    <ul class="plan-features">
+                        <li>Створення стратегії розвитку</li>
+                        <li>Ведення соціальних мереж</li>
+                        <li>Контент план на 10 публікацій</li>
+                        <li>Запуск таргетованої реклами</li>
+                        <li>Аналіз та звітність за місяць</li>
+                    </ul>
+                    <button class="plan-button">Обрати план</button>
+                </div>
+            </div>
+
+            <h3 class="section-title fade-in" style="margin-top: 4rem; margin-bottom: 2rem;">Консультації</h3>
+            <div class="consultations-grid">
+                <div class="consultation-card fade-in">
+                    <div class="consultation-platform">Консультація по TikTok</div>
+                    <div class="consultation-price">від 500 ₴</div>
+                    <ul class="consultation-features">
+                        <li>Аналіз вашого профілю</li>
+                        <li>Аналіз вашої статистики на сторінці</li>
+                        <li>Аналіз контент-плану який у вас вже є</li>
+                        <li>Аналіз тегів які ви додаєте під постом</li>
+                        <li>Повна звітність по даній роботі</li>
+                    </ul>
+                </div>
+                <div class="consultation-card fade-in">
+                    <div class="consultation-platform">Консультація по Facebook</div>
+                    <div class="consultation-price">від 800 ₴</div>
+                    <ul class="consultation-features">
+                        <li>Аналіз вашого профілю</li>
+                        <li>Аналіз опису щодо вашого профілю</li>
+                        <li>Аналіз статистики вашої сторінки</li>
+                        <li>Аналіз щодо постів які є на вашій сторінці</li>
+                        <li>Повна звітність по даній роботі</li>
+                    </ul>
+                </div>
+                <div class="consultation-card fade-in">
+                    <div class="consultation-platform">Консультація по Instagram</div>
+                    <div class="consultation-price">від 1000 ₴</div>
+                    <ul class="consultation-features">
+                        <li>Аналіз вашого профілю</li>
+                        <li>Аналіз постів на вашій сторінці</li>
+                        <li>Аналіз контент-плану</li>
+                        <li>Аналіз статистики по вашій сторінці</li>
+                        <li>Повна звітність по даній роботі</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title fade-in">Відповіді на часті запитання</h2>
+            <div class="faq-item fade-in">
+                <button class="faq-question">Як швидко я побачу результати?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Перші результати ви зможете побачити вже через 2-3 тижні активної роботи. Залежно від специфіки вашого бізнесу та поточного стану акаунту, значні зміни стають помітними через 1-2 місяці регулярної роботи.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <button class="faq-question">Чи потрібно мені надавати контент?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Ні, це не обов'язково. Я можу створювати контент самостійно на основі вашого брендбуку та зібраної інформації про ваш бізнес. Але якщо у вас є власні фото, відео або ідеї - це завжди вітається і допоможе зробити контент ще більш автентичним.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <button class="faq-question">Яку мережу ви порекомендуєте мені?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Вибір соціальної мережі залежить від вашої цільової аудиторії та специфіки бізнесу. Instagram підходить для B2C бізнесу, особливо у сферах краси, моди, їжі. Facebook ефективний для більш зрілої аудиторії та B2B. TikTok ідеальний для молодої аудиторії та вірусного контенту. Після аналізу вашого бізнесу я дам персональні рекомендації.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Давайте почнемо створювати вашу стратегію розвитку бізнесу</h2>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>Залиште вашу заявку</h3>
+                    <p>Заповніть форму, і я зв'яжуся з вами найближчим часом для обговорення деталей співпраці</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span>📞</span>
+                            <span>+380994320062</span>
+                        </div>
+                        <div class="contact-item">
+                            <span>✉️</span>
+                            <span>hryha.yuriy@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span>📱</span>
+                            <span>@hryha_yuriy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form fade-in">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Ім'я *</label>
+                            <input type="text" id="name" name="name" placeholder="Ваше ФІО" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Номер телефону" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Що вас цікавить? *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Оберіть послугу</option>
+                                <option value="social-management">Ведення соціальних мереж</option>
+                                <option value="content-plan">Розробка контент-плану</option>
+                                <option value="target-ads">Таргетована реклама</option>
+                                <option value="analytics">Аналіз та оптимізація</option>
+                                <option value="consultation-tiktok">Консультація по TikTok</option>
+                                <option value="consultation-facebook">Консультація по Facebook</option>
+                                <option value="consultation-instagram">Консультація по Instagram</option>
+                                <option value="start-plan">План "Старт"</option>
+                                <option value="growth-plan">План "Розкрутка"</option>
+                                <option value="business-plan">План "Бізнес"</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Короткий опис запиту *</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Розкажіть детальніше про ваш бізнес та цілі..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Підтвердити</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3 style="color: #60a5fa; margin-bottom: 1rem;">Грига Юрій</h3>
+            <p style="margin-bottom: 2rem;">SMM спеціаліст</p>
+            <div class="social-links">
+                <a href="tel:+380994320062" class="social-link">📞</a>
+                <a href="mailto:hryha.yuriy@gmail.com" class="social-link">✉️</a>
+                <a href="#" class="social-link">📱</a>
+                <a href="#" class="social-link">💬</a>
+            </div>
+            <p>&copy; 2025 Грига Юрій. Всі права захищені.</p>
+            <p>Прокачуємо ваш бізнес у соцмережах разом!</p>
+        </div>
+    </footer>
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('loading').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('loading').style.display = 'none';
+                }, 500);
+            }, 1500);
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header Background on Scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'linear-gradient(135deg, rgba(30, 58, 138, 0.98), rgba(55, 65, 81, 0.98))';
+            } else {
+                header.style.background = 'linear-gradient(135deg, rgba(30, 58, 138, 0.95), rgba(55, 65, 81, 0.95))';
+            }
+        });
+
+        // Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number, .case-stat-number');
+            
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent.replace(/[^0-9]/g, ''));
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        counter.textContent = counter.textContent.replace(/[0-9]+/, target);
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = counter.textContent.replace(/[0-9]+/, Math.floor(current));
+                    }
+                }, 16);
+            });
+        }
+
+        // Stats section observer
+        const statsSection = document.querySelector('.expert-stats');
+        const casesSection = document.querySelector('.cases');
+        
+        const statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+        if (casesSection) {
+            statsObserver.observe(casesSection);
+        }
+
+        // FAQ Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const isActive = this.classList.contains('active');
+                
+                // Close all answers
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('active');
+                });
+                
+                // Open current answer if it wasn't active
+                if (!isActive) {
+                    this.classList.add('active');
+                    answer.classList.add('active');
+                }
+            });
+        });
+
+        // Form Submission
+        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic form validation
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+            
+            if (!name || !phone || !service || !message) {
+                alert('Будь ласка, заповніть всі обов\'язкові поля');
+                return;
+            }
+            
+            // Phone validation
+            const phoneRegex = /^[\+]?[0-9\s\-\(\)]+$/;
+            if (!phoneRegex.test(phone)) {
+                alert('Будь ласка, введіть коректний номер телефону');
+                return;
+            }
+            
+            // Simulate form submission
+            const submitBtn = document.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Відправляємо...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Дякую за вашу заявку! Я зв\'яжуся з вами найближчим часом.');
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        // Plan buttons functionality
+        document.querySelectorAll('.plan-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const planName = this.closest('.pricing-card').querySelector('.plan-name').textContent;
+                // Scroll to contact form
+                document.getElementById('contact').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Pre-select the plan in the form
+                setTimeout(() => {
+                    const serviceSelect = document.getElementById('service');
+                    const planOption = Array.from(serviceSelect.options).find(option => 
+                        option.textContent.toLowerCase().includes(planName.toLowerCase())
+                    );
+                    if (planOption) {
+                        serviceSelect.value = planOption.value;
+                    }
+                }, 500);
+            });
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load profile photo
+            loadProfilePhoto();
+        });
+
+        // Load profile photo
+        async function loadProfilePhoto() {
+            try {
+                const photoData = await window.fs.readFile('image-1.jpg');
+                const blob = new Blob([photoData], { type: 'image/jpeg' });
+                const imageUrl = URL.createObjectURL(blob);
+                
+                const profileImg = document.getElementById('profile-photo');
+                if (profileImg) {
+                    profileImg.src = imageUrl;
+                }
+            } catch (error) {
+                console.log('Photo not loaded, using placeholder');
+                // Fallback if photo not available
+                const profileImg = document.getElementById('profile-photo');
+                if (profileImg) {
+                    profileImg.style.background = 'linear-gradient(45deg, #1e3a8a, #3730a3)';
+                    profileImg.style.display = 'flex';
+                    profileImg.style.alignItems = 'center';
+                    profileImg.style.justifyContent = 'center';
+                    profileImg.style.color = 'white';
+                    profileImg.style.fontSize = '1.2rem';
+                    profileImg.innerHTML = 'Фото Григи Юрія<br>SMM спеціаліст';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
