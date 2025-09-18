@@ -970,7 +970,7 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image fade-in">
-                    <img id="profile-photo" src="" alt="Грига Юрій - SMM спеціаліст" />
+                    <img src="image-1.jpg" alt="Грига Юрій - SMM спеціаліст" />
                 </div>
                 <div class="about-text fade-in">
                     <h3>Грига Юрій</h3>
@@ -1506,36 +1506,8 @@
 
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
-            // Load profile photo
-            loadProfilePhoto();
+            // Any initialization code here
         });
-
-        // Load profile photo
-        async function loadProfilePhoto() {
-            try {
-                const photoData = await window.fs.readFile('image-1.jpg');
-                const blob = new Blob([photoData], { type: 'image/jpeg' });
-                const imageUrl = URL.createObjectURL(blob);
-                
-                const profileImg = document.getElementById('profile-photo');
-                if (profileImg) {
-                    profileImg.src = imageUrl;
-                }
-            } catch (error) {
-                console.log('Photo not loaded, using placeholder');
-                // Fallback if photo not available
-                const profileImg = document.getElementById('profile-photo');
-                if (profileImg) {
-                    profileImg.style.background = 'linear-gradient(45deg, #1e3a8a, #3730a3)';
-                    profileImg.style.display = 'flex';
-                    profileImg.style.alignItems = 'center';
-                    profileImg.style.justifyContent = 'center';
-                    profileImg.style.color = 'white';
-                    profileImg.style.fontSize = '1.2rem';
-                    profileImg.innerHTML = 'Фото Григи Юрія<br>SMM спеціаліст';
-                }
-            }
-        }
     </script>
 </body>
 </html>
