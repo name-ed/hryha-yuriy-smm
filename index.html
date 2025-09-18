@@ -411,11 +411,43 @@
             padding: 2rem;
             text-align: center;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
         .case-item:hover {
             transform: scale(1.05);
             background: rgba(255,255,255,0.15);
+        }
+
+        .case-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            overflow: hidden;
+            border: 3px solid #60a5fa;
+            box-shadow: 0 5px 15px rgba(96, 165, 250, 0.3);
+        }
+
+        .case-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .case-logo-placeholder {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            background: linear-gradient(45deg, #60a5fa, #3b82f6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            border: 3px solid #60a5fa;
+            box-shadow: 0 5px 15px rgba(96, 165, 250, 0.3);
         }
 
         .case-item h3 {
@@ -1047,7 +1079,8 @@
             <h2 class="section-title fade-in">Успішні кейси</h2>
             <div class="cases-grid">
                 <div class="case-item fade-in">
-                    <h3>Savage flowers</h3>
+                    <div class="case-logo-placeholder">🌸</div>
+                    <h3>CryptoWay</h3>
                     <p>Підвищення впізнаваності бренду</p>
                     <div class="case-stats">
                         <div class="case-stat">
@@ -1066,7 +1099,8 @@
                     <a href="https://t.me/CryptoWayX" target="_blank" class="case-link">Переглянути кейс</a>
                 </div>
                 <div class="case-item fade-in">
-                    <h3>Imperial cosmetics</h3>
+                    <div class="case-logo-placeholder">💄</div>
+                    <h3>PromoUA</h3>
                     <p>Підвищення впізнаваності бренду</p>
                     <div class="case-stats">
                         <div class="case-stat">
@@ -1085,7 +1119,8 @@
                     <a href="https://t.me/PromoUAPro" target="_blank" class="case-link">Переглянути кейс</a>
                 </div>
                 <div class="case-item fade-in">
-                    <h3>ENERGY DRINK CO</h3>
+                    <div class="case-logo-placeholder">⚡</div>
+                    <h3>КРИПТО ІНВЕСТИЦІЇ</h3>
                     <p>Підвищення впізнаваності бренду</p>
                     <div class="case-stats">
                         <div class="case-stat">
@@ -1104,7 +1139,8 @@
                     <a href="https://t.me/ua_cryptoinvest" target="_blank" class="case-link">Переглянути кейс</a>
                 </div>
                 <div class="case-item fade-in">
-                    <h3>Travel collection</h3>
+                    <div class="case-logo-placeholder">✈️</div>
+                    <h3>Крипто путівник</h3>
                     <p>Підвищення впізнаваності бренду</p>
                     <div class="case-stats">
                         <div class="case-stat">
@@ -1120,6 +1156,27 @@
                             <div class="case-stat-label">замовлень</div>
                         </div>
                     </div>
+                    <a href="https://t.me/crypto_pytivnuk" target="_blank" class="case-link">Переглянути кейс</a>
+                </div>
+                <div class="case-item fade-in">
+                    <div class="case-logo-placeholder">₿</div>
+                    <h3>КРИПТО UA</h3>
+                    <p>Підвищення впізнаваності бренду</p>
+                    <div class="case-stats">
+                        <div class="case-stat">
+                            <div class="case-stat-number">+1200</div>
+                            <div class="case-stat-label">підписників</div>
+                        </div>
+                        <div class="case-stat">
+                            <div class="case-stat-number">+45%</div>
+                            <div class="case-stat-label">активності</div>
+                        </div>
+                        <div class="case-stat">
+                            <div class="case-stat-number">+350</div>
+                            <div class="case-stat-label">переглядів</div>
+                        </div>
+                    </div>
+                    <a href="https://t.me/KriptoUkraine" target="_blank" class="case-link">Переглянути кейс</a>
                 </div>
             </div>
         </div>
